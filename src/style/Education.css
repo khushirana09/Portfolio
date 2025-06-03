@@ -1,0 +1,100 @@
+/* Education.css - Updated for single graduation block */
+
+.Education-block {
+  background-color: #121212;
+  padding: 60px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+}
+body.dark-mode .Education-block {
+  background-color: #1e1e2f;
+}
+.section.education .container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 255, 204, 0.15);
+  padding: 30px 40px;
+}
+
+.Education-block .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #e2e2e2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Graduation Year block */
+.grad-year {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #00ffcc;
+  min-width: 140px;
+  text-align: center;
+  border-right: 3px solid #00ffcc;
+  padding-right: 30px;
+  user-select: none;
+  letter-spacing: 4px;
+}
+
+/* Graduation details block */
+.grad-details {
+  padding-left: 30px;
+  flex: 1;
+}
+
+.grad-details h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ffcc;
+}
+
+.grad-details p {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.grad-details span {
+  font-style: italic;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .section.education .container {
+    flex-direction: column;
+    padding: 25px 20px;
+  }
+
+  .grad-year {
+    font-size: 3.5rem;
+    border-right: none;
+    border-bottom: 3px solid #00ffcc;
+    padding-right: 0;
+    padding-bottom: 15px;
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .grad-details {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .grad-details h3 {
+    font-size: 1.5rem;
+  }
+}

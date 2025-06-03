@@ -1,0 +1,84 @@
+body.light-mode .about-terminal {
+  background-color: white;
+  padding: 30px 0px;
+}
+.terminal-content {
+  background-color: #1e1e2f;
+  color: #fff;
+  font-family: "Fira Code", monospace;
+  max-width: 900px;
+  margin: 4rem auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
+}
+body.dark-mode .terminal-body {
+  background-color: #2d2d3a;
+}
+
+.terminal-header {
+  background-color: #2d2d3a;
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-header .circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-header .red {
+  background-color: #ff5f56;
+}
+
+.terminal-header .yellow {
+  background-color: #ffbd2e;
+}
+
+.terminal-header .green {
+  background-color: #27c93f;
+}
+
+.terminal-body {
+  padding: 2rem;
+}
+
+.terminal-line {
+  color: #6a9955;
+  margin-bottom: 0.5rem;
+}
+
+.command {
+  color: #569cd6;
+}
+
+.terminal-text {
+  color: #ccc;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #c586c0;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 600px) {
+  body.light-mode .about-terminal {
+    padding: 10px 0px;
+  }
+}

@@ -1,0 +1,137 @@
+body.light-mode .projects-timeline-section {
+  background-color: white;
+  padding: 30px 0px;
+}
+.project-terminal-box {
+  background: #0e101c;
+  padding: 60px 20px;
+  font-family: "Segoe UI", sans-serif;
+  max-width: 1100px;
+  margin: 60px auto;
+}
+.project-content {
+  padding: 0px 50px;
+}
+body.light-mode .project-content .section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #e2e2e2;
+  text-transform: uppercase;
+}
+
+.timeline-container {
+  position: relative;
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ccc;
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+.timeline-nodes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.timeline-node {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 3px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+.timeline-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background-color: #222; /* You can customize the color */
+  transform: translateY(-50%);
+  border-radius: 2px;
+  z-index: 1;
+  transition: width 0.4s ease;
+}
+.timeline-node:hover {
+  border-color: #555;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-node.active {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.node-tooltip {
+  position: absolute;
+  top: 65px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  background: #222;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.timeline-node:hover .node-tooltip {
+  opacity: 1;
+}
+
+.project-details {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 650px;
+  margin: 0 auto;
+  transition: opacity 0.3s ease;
+  min-height: 130px;
+}
+.project-details h3 {
+  font-weight: 700;
+  font-size: 21px;
+}
+.project-details p {
+  font-weight: 400;
+  font-size: 15px;
+}
+@media only screen and (max-width: 600px) {
+  .project-content {
+    padding: 0px 20px;
+  }
+  .project-details {
+    padding: 30px 20px;
+  }
+}

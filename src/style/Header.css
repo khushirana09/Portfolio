@@ -1,0 +1,116 @@
+.main-Header {
+  width: 100%;
+  background-color: #1e1e2f;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+/* with dark mode navbar css */
+body.dark-mode .navbar {
+  background-color: #2c2c3e;
+}
+body.light-mode .navbar {
+  background-color: white;
+}
+body.light-mode .nav-links a,
+body.light-mode .logo {
+  color: black;
+}
+body.dark-mode .nav-links a {
+  color: #ddd;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #fff;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark-mode .logo {
+  background-image: url("../assets/logo5.png");
+  background-size: cover;
+  background-position: center;
+  height: 111px;
+  width: 111px;
+}
+body.light-mode .logo {
+  background-image: url("../assets/logo-black.png");
+  background-size: cover;
+  background-position: center;
+  height: 111px;
+  width: 111px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00adb5;
+}
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: white;
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #1e1e2f;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-links.open {
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .hamburger {
+    display: block;
+  }
+  body.light-mode .hamburger {
+    color: black;
+  }
+}

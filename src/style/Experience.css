@@ -1,0 +1,88 @@
+.experience-section {
+  padding: 60px 20px;
+  background: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 700;
+}
+body.dark-mode .section-title {
+  color: #e2e2e2;
+}
+.experience-stack {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.experience-card {
+  background: #0e101c;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px 25px 80px;
+  margin-bottom: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode .experience-section {
+  background-color: #0e101c;
+}
+.card-icon {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  font-size: 2.1rem;
+  background: #3f51b5;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.company {
+  font-weight: 400;
+  color: #c1c1c1;
+  font-size: 1rem;
+}
+
+.date-badge {
+  display: inline-block;
+  background: #e3e7ff;
+  color: #3f51b5;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.experience-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ababab;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}

@@ -1,0 +1,105 @@
+.hero-content {
+  background-color: #1e1e2f; /* Dark editor background */
+  color: #ffffff;
+  font-family: "Fira Code", "Courier New", monospace;
+  padding: 4rem 1rem;
+  text-align: left;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.code-editor {
+  background-color: #2d2d3a;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.code-comment {
+  color: #6a9955;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.code-line {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  user-select: none;
+  white-space: pre;
+  font-family: "Fira Code", "Courier New", monospace;
+  color: #d4d4d4;
+  position: relative;
+}
+
+.code-keyword {
+  color: #569cd6;
+}
+
+.code-variable {
+  color: #9cdcfe;
+}
+
+.code-string {
+  color: #ce9178;
+}
+
+.code-highlight {
+  color: #c586c0;
+  font-weight: bold;
+}
+
+.code-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #ffffff;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+  position: relative;
+  top: 5px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.tagline {
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.explore-projects {
+  display: inline-block;
+  margin-top: 3.5rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  text-align: center;
+  position: relative;
+  z-index: 99999;
+}
+
+.explore-btn {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .code-line {
+    font-size: 0.9rem;
+  }
+  .code-editor {
+    padding: 2rem 1rem;
+  }
+}

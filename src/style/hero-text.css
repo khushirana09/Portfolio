@@ -1,0 +1,69 @@
+.heroineName {
+  font-family: "Ancizar Serif", serif;
+}
+.heroineName h1 {
+  font-weight: 600;
+  font-size: 60px;
+}
+canvas {
+  display: block;
+}
+.portfolio-btn {
+  position: relative;
+  z-index: 9999;
+  top: -15px;
+}
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #ffffff50, 0 0 20px #ffffff30;
+  }
+  50% {
+    box-shadow: 0 0 20px #ffffff80, 0 0 40px #ffffff40;
+  }
+  100% {
+    box-shadow: 0 0 10px #ffffff50, 0 0 20px #ffffff30;
+  }
+}
+@keyframes floatInSpace {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-6px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.letter.float-in-space {
+  display: inline-block;
+  animation: floatInSpace 3s ease-in-out infinite, flicker 1s ease-in-out 1;
+}
