@@ -1,29 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 
 const HeroText = ({ onButtonClick }) => {
-  const [page, setPage] = useState(1);
-  const [fadeOut, setFadeOut] = useState(false);
   const textRef2 = useRef(null);
 
   useEffect(() => {
-    // Wait 4.5s: delay to sync with RocketIntro animation
-    const timeout = setTimeout(() => {
-      setFadeOut(true);
-      setTimeout(() => {
-        setPage(2);
-        setFadeOut(false);
-      }, 1000); // fade out duration
-    }, 4500); // 4.5s wait to finish RocketIntro
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
-    if (page === 2 && textRef2.current) {
+    if (textRef2.current) {
       animateText(textRef2.current);
     }
-  }, [page]);
+  }, []);
 
   const animateText = (element) => {
     element.innerHTML = element.textContent.replace(
@@ -49,27 +34,19 @@ const HeroText = ({ onButtonClick }) => {
   };
 
   return (
-    <div
-      className={`absolute inset-0 flex flex-col items-center justify-center text-white font-lobster space-y-6 transition-opacity duration-1000 ${
-        fadeOut ? "opacity-0" : "opacity-100"
-      } z-10`}
-    >
-      {page === 2 && (
-        <>
-          <h1
-            ref={textRef2}
-            className="text-3xl md:text-3xl lg:text-5xl font-lobster"
-          >
-            Welcome to my space
-          </h1>
-          <button
-            onClick={onButtonClick}
-            className="mt-6 px-8 py-3 border border-white text-white rounded-full bg-transparent hover:bg-white hover:text-black transition-all duration-300 animate-[pulseGlow_2s_infinite] portfolio-btn"
-          >
-            Portfolio
-          </button>
-        </>
-      )}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-white font-lobster space-y-6 transition-opacity duration-1000 z-10">
+      <h1
+        ref={textRef2}
+        className="text-3xl md:text-3xl lg:text-5xl font-lobster"
+      >
+        Welcome to my space
+      </h1>
+      <button
+        onClick={onButtonClick}
+        className="mt-6 px-8 py-3 border border-white text-white rounded-full bg-transparent hover:bg-white hover:text-black transition-all duration-300 animate-[pulseGlow_2s_infinite] portfolio-btn"
+      >
+        Portfolio
+      </button>
     </div>
   );
 };

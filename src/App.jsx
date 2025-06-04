@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Introduction from "./components/Introduction";
@@ -15,26 +15,35 @@ import HeroText from "./components/HeroText";
 import RocketIntro from "./components/RocketIntro";
 
 function App() {
-  const [showPortfolio, setShowPortfolio] = useState(false);
+  const [stage, setStage] = useState("rocket"); // 'rocket' | 'welcome' | 'portfolio'
+
+  useEffect(() => {
+    // Show welcome screen after rocket intro
+    const timer = setTimeout(() => {
+      setStage("welcome");
+    }, 5500); // not 999500!
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-      {/* ⭐ Starry Background & Cursor - always stay on screen */}
+      {/* Always visible */}
       <StarBackground />
       <div id="custom-cursor"></div>
       <CustomCursor />
 
-      {/* ✅ Step 1: Show RocketIntro first (page 1) */}
-      {!showPortfolio && (
-        <>
-          <RocketIntro />
-          <HeroText onButtonClick={() => setShowPortfolio(true)} />
-        </>
+      {/* Rocket Intro Stage */}
+      {stage === "rocket" && <RocketIntro />}
+
+      {/* Welcome Text Stage */}
+      {stage === "welcome" && (
+        <HeroText onButtonClick={() => setStage("portfolio")} />
       )}
 
-      {/* ✅ Step 2: Show Portfolio only after HeroText button click (page 2) */}
-      {showPortfolio && (
-        <div className="relative z-10 bg-black text-white">
+      {/* Portfolio Stage */}
+      {stage === "portfolio" && (
+        <div className=" bg-black text-white">
           <Header />
           <Introduction />
           <About />
