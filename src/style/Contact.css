@@ -100,7 +100,9 @@ body.dark-mode .section.contact {
     flex-direction: column;
     align-items: center;
   }
-
+  .contact-hero .section-title {
+    font-size: 2.5rem;
+  }
   .contact-hero {
     max-width: 100%;
   }

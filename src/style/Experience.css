@@ -21,7 +21,7 @@ body.dark-mode .section-title {
 }
 
 .experience-card {
-  background: #0e101c;
+  background: #1e1f2b;
   border-radius: 12px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   padding: 25px 30px 25px 80px;
@@ -85,4 +85,64 @@ body.dark-mode .experience-section {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
+}
+/* 📱 Mobile slider behavior */
+@media only screen and (max-width: 768px) {
+  .experience-stack {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 10px;
+    position: relative;
+  }
+
+  .experience-card {
+    min-width: 90%;
+    scroll-snap-align: center;
+    transform: scale(1);
+    height: auto;
+    margin: 0 5%;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+
+  .experience-card.active {
+    transform: scale(1.02);
+  }
+
+  .experience-slider-buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* let clicks pass through except buttons */
+    z-index: 2;
+  }
+
+  .experience-slider-buttons button {
+    pointer-events: all;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 0;
+  }
+  .experience-stack-wrapper {
+    position: relative;
+  }
+
+  /* Remove unnecessary height lock */
+  .experience-section {
+    padding-bottom: 50px;
+  }
 }
