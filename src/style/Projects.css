@@ -134,4 +134,14 @@ body.light-mode .project-content .section-title {
   .project-details {
     padding: 30px 20px;
   }
+  .timeline-node:first-child .node-tooltip {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .timeline-node:last-child .node-tooltip {
+    left: auto;
+    right: 0;
+    transform: translateX(0);
+  }
 }

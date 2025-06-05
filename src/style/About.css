@@ -81,4 +81,7 @@ body.dark-mode .terminal-body {
   body.light-mode .about-terminal {
     padding: 10px 0px;
   }
+  .terminal-content{
+    margin: 4rem 1rem;
+  }
 }

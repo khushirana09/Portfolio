@@ -91,17 +91,26 @@ body.light-mode .logo {
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
-    background-color: #1e1e2f;
+    background-color: black;
     position: absolute;
     top: 70px;
     right: 0;
     width: 100%;
-    padding: 20px;
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
   }
-
+  .nav-links {
+    gap: 0px;
+  }
+  body.light-mode .nav-links a {
+    color: #ddd;
+    border-bottom: 1px solid #c1bdbd30;
+  }
+  .nav-links a {
+    padding: 20px;
+    border-bottom: 1px solid #c1bdbd30;
+  }
   .nav-links.open {
     transform: translateY(0%);
     opacity: 1;
@@ -112,5 +121,8 @@ body.light-mode .logo {
   }
   body.light-mode .hamburger {
     color: black;
+  }
+  body.light-mode .navbar {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   }
 }
