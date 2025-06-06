@@ -1,0 +1,61 @@
+.resume-container {
+  padding: 60px 20px;
+  background-color: #0e101c;
+  color: #fff;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.resume-box {
+  max-width: 900px;
+  margin: auto;
+  background-color: #1a1a2e;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.resume-sub {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #999;
+}
+
+.resume-section {
+  margin-bottom: 30px;
+}
+
+.resume-section h2 {
+  color: #00adb5;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.resume-section ul {
+  padding-left: 20px;
+}
+
+.download-resume {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.download-btn {
+  background-color: #00adb5;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #007b8a;
+}

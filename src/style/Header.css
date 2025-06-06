@@ -59,17 +59,32 @@ body.light-mode .logo {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.nav-links a {
-  color: #ffffff;
+.nav-links button {
+  color: inherit;
   text-decoration: none;
   font-size: 16px;
+  padding: 8px 12px;
+  position: relative;
   transition: color 0.3s ease;
+  font-weight: 500;
+}
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00adb5;
+  transition: width 0.3s ease;
+}
+.nav-links button:hover::after {
+  width: 100%;
 }
 
-.nav-links a:hover {
+.nav-links button:hover {
   color: #00adb5;
 }
-
 #darkModeToggle {
   background: none;
   border: none;
@@ -84,9 +99,12 @@ body.light-mode .logo {
   font-size: 28px;
   cursor: pointer;
   margin-left: 15px;
+  transition: transform 0.3s ease;
   color: white;
 }
-
+.hamburger:hover {
+  transform: scale(1.2);
+}
 /* Responsive nav */
 @media (max-width: 768px) {
   .nav-links {
@@ -107,7 +125,7 @@ body.light-mode .logo {
     color: #ddd;
     border-bottom: 1px solid #c1bdbd30;
   }
-  .nav-links a {
+  .nav-links button {
     padding: 20px;
     border-bottom: 1px solid #c1bdbd30;
   }
