@@ -23,7 +23,7 @@ function HomePage({ stage, setStage, goToPortfolio }) {
 
     const timer = setTimeout(() => {
       setStage("welcome");
-    }, 325000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, [setStage]);
