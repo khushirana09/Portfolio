@@ -20,7 +20,7 @@ const RocketIntro = () => {
         initial={{ opacity: 0, x: "-100vw", scale: 0.5 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ delay: 1.5, type: "spring", stiffness: 60 }}
-        className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-lobster mt-[-30px]"
+        className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-lobster mt-[-40px]"
       >
         Hi, I'm Khushi
       </motion.h1>
