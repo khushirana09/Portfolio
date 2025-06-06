@@ -12,6 +12,14 @@ function Header() {
   });
 
   useEffect(() => {
+    // remove both classes first to keep ot clean
+    document.body.classList.remove("homepage", "resume-page");
+
+    if (location.pathname === "/") {
+      document.body.classList.add("homepage");
+    } else if (location.pathname === "/resume") {
+      document.body.classList.add("resume-page");
+    }
     if (darkMode) {
       document.body.classList.add("dark-mode");
       document.body.classList.remove("light-mode");
@@ -82,7 +90,7 @@ function Header() {
           ) : (
             // ✅ Minimal nav for resume
             <nav className="nav-links">
-              <button onClick={() => navigate("/portfolio")}>← Homepage</button>
+              <button onClick={() => navigate("/" , {state: {goToPortfolio: true}})}>← Homepage</button>
             </nav>
           )}
 

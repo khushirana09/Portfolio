@@ -13,15 +13,15 @@ body.dark-mode .navbar {
 body.light-mode .navbar {
   background-color: white;
 }
-body.light-mode .nav-links a,
+body.light-mode .nav-links button,
 body.light-mode .logo {
   color: black;
 }
-body.dark-mode .nav-links a {
+body.dark-mode .nav-links button {
   color: #ddd;
 }
 
-body.dark-mode .nav-links a:hover {
+body.dark-mode .nav-links button:hover {
   color: #fff;
 }
 .navbar {
@@ -68,6 +68,10 @@ body.light-mode .logo {
   transition: color 0.3s ease;
   font-weight: 500;
 }
+body.light-mode .nav-links button,
+body.light-mode .nav-links button a {
+  color: black;
+}
 .nav-links button::after {
   content: "";
   position: absolute;
@@ -107,7 +111,7 @@ body.light-mode .logo {
 }
 /* Responsive nav */
 @media (max-width: 768px) {
-  .nav-links {
+  .homepage .nav-links {
     flex-direction: column;
     background-color: black;
     position: absolute;
@@ -118,14 +122,21 @@ body.light-mode .logo {
     opacity: 0;
     pointer-events: none;
   }
+  nav.nav-links.open button a {
+    color: #ddd;
+  }
   .nav-links {
     gap: 0px;
   }
-  body.light-mode .nav-links a {
+  body.light-mode .nav-links button {
     color: #ddd;
     border-bottom: 1px solid #c1bdbd30;
   }
-  .nav-links button {
+  body.resume-page.light-mode .nav-links button{
+    color: black;
+    border-bottom: none;
+  }
+  .homepage .nav-links button {
     padding: 20px;
     border-bottom: 1px solid #c1bdbd30;
   }

@@ -131,6 +131,9 @@ body.light-mode .project-content .section-title {
   .project-content {
     padding: 0px 20px;
   }
+  .project-terminal-box {
+    margin: 60px 10px;
+  }
   .project-details {
     padding: 30px 20px;
   }
